@@ -13,14 +13,19 @@ function calcularTotal() {
 
     // Converte os valores digitados para número
     const v1 = parseFloat(input01.value);
-    console.log(v1);
     const v2 = parseFloat(input02.value);
-    console.log(v1);
 
     // Vai verificar se algum valor não é número (isNaN)
     if (isNaN(v1) || isNaN(v2)) {
 
-        alert('Valor 01 ou Valor 02 inválido.')
+        // Display para exibir a área de resultado
+        resultado.style.display = 'flex';
+
+        // Exibe o resultado final
+        resultado.innerHTML = `
+            <h2> Erro de validação </h2><br>
+                    <p>Por favor, informe valores numéricos válidos nos dois campos.</p>
+        `
 
     } else {
 
@@ -30,11 +35,13 @@ function calcularTotal() {
         // Exibe o resultado final
         resultado.innerHTML = `
             <h2> Total da Compra </h2>
-                <ul>
-                    <li>Valor do produto: R$<span>${v1}</span> </li>
-                    <li>Quantidade de produtos: <span>${v2}</span></li>
-                    <li>O valor total da compra será de R$<span>${v1 * v2.toFixed(2)}</span> </li>
-                </ul>
+            <br>
+            <p>Valor do produto: R$<span>${v1.toFixed(2)}</span> </p>
+            <br>
+            <p>Quantidade de produtos: <span>${v2}</span></p>
+            <br>
+            <p>O valor total da compra será de R$<span>${(v1 * v2).toFixed(2)}</span> </p>
+                
         `
     };
 
@@ -49,7 +56,14 @@ function desconto() {
     // Vai verificar se algum valor não é número (isNaN)
     if (isNaN(v1) || isNaN(v2)) {
 
-        alert('Valor 01 ou Valor 02 inválido.')
+        // Display para exibir a área de resultado
+        resultado.style.display = 'flex';
+
+        // Exibe o resultado final
+        resultado.innerHTML = `
+            <h2> Erro de validação </h2><br>
+                    <p>Por favor, informe valores numéricos válidos nos dois campos.</p>
+        `
 
     } else {
 
@@ -58,12 +72,10 @@ function desconto() {
 
         // Exibe o resultado final
         resultado.innerHTML = `
-            <h2> Total da Compra </h2>
-                <ul>
-                    <li>Valor do produto: R$<span>${v1}</span> </li>
-                    <li>Percentual do desconto: <span>${v2}</span></li>
-                    <li>O valor total de desconto será de R$<span>${v1-(v1 * v2)/100 .toFixed(2)}</span> </li>
-                </ul>
+            <h2> Desconto Aplicado </h2></br>
+                    <p>Foi aplicado um desconto <span>${v2}</span>% sobre um valor de R$<span>${v1.toFixed(2)}</span></p></br>
+                    <p>Valor final com desconto: R$<span>${(v1-(v1 * v2)/100).toFixed(2)}</span> </p>
+              
         `
     };
 
@@ -78,8 +90,14 @@ function juros() {
     // Vai verificar se algum valor não é número (isNaN)
     if (isNaN(v1) || isNaN(v2)) {
 
-        alert('Valor 01 ou Valor 02 inválido.')
+       // Display para exibir a área de resultado
+       resultado.style.display = 'flex';
 
+       // Exibe o resultado final
+       resultado.innerHTML = `
+           <h2> Erro de validação </h2><br>
+                   <p>Por favor, informe valores numéricos válidos nos dois campos.</p>
+       `
     } else {
 
         // Display para exibir a área de resultado
@@ -87,12 +105,10 @@ function juros() {
 
         // Exibe o resultado final
         resultado.innerHTML = `
-            <h2> Total da Compra </h2>
-                <ul>
-                    <li>Valor do produto: R$<span>${v1}</span> </li>
-                    <li>Percentual de acréscimo: <span>${v2}</span></li>
-                    <li>O valor total de acréscimo será de R$<span>${v1+(v1 * v2)/100 .toFixed(2)}</span> </li>
-                </ul>
+            <h2> Juros Aplicado </h2></br>
+                    <>Foi aplicado um acrécimo de <span>${v2}</span>% sobre o valor de R$<span>${v1.toFixed(2)}</span> </p></br>
+                    <>Valor final com juros R$<span>${(v1+(v1 * v2)/100).toFixed(2)}</span> </p>
+               
         `
     };
 
@@ -107,7 +123,14 @@ function comissao() {
     // Vai verificar se algum valor não é número (isNaN)
     if (isNaN(v1) || isNaN(v2)) {
 
-        alert('Valor 01 ou Valor 02 inválido.')
+        // Display para exibir a área de resultado
+        resultado.style.display = 'flex';
+
+        // Exibe o resultado final
+        resultado.innerHTML = `
+            <h2> Erro de validação </h2><br>
+                    <p>Por favor, informe valores numéricos válidos nos dois campos.</p>
+        `
 
     } else {
 
@@ -116,12 +139,10 @@ function comissao() {
 
         // Exibe o resultado final
         resultado.innerHTML = `
-            <h2> Total da Compra </h2>
-                <ul>
-                    <li>Valor vendido no dia: R$<span>${v1}</span> </li>
-                    <li>Percentual da comissão: <span>${v2}</span></li>
-                    <li>Total recebido de comissão R$<span>${(v1 * v2)/100 .toFixed(2)}</span> </li>
-                </ul>
+            <h2> Comissão Calculada </h2></br>
+                    <p>Comissão de <span>${v2}</span>% sobre uma venda de R$<span>${v1.toFixed(2)}</span></li></br>
+                    <p>Valor da comissão: R$<span>${((v1 * v2)/100).toFixed(2)}</span> </li>
+                
         `
     };
 
@@ -136,7 +157,14 @@ function lucro() {
     // Vai verificar se algum valor não é número (isNaN)
     if (isNaN(v1) || isNaN(v2)) {
 
-        alert('Valor 01 ou Valor 02 inválido.')
+        // Display para exibir a área de resultado
+        resultado.style.display = 'flex';
+
+        // Exibe o resultado final
+        resultado.innerHTML = `
+            <h2> Erro de validação </h2><br>
+                    <p>Por favor, informe valores numéricos válidos nos dois campos.</p>
+        `
 
     } else {
 
@@ -145,12 +173,10 @@ function lucro() {
 
         // Exibe o resultado final
         resultado.innerHTML = `
-            <h2> Total da Compra </h2>
-                <ul>
-                    <li>Valor que foi vendido: R$<span>${v1}</span> </li>
-                    <li>Valor que o vendedor comprou: <span>${v2}</span></li>
-                    <li>O valor total do lucro será de R$<span>${v1 - v2.toFixed(2)}</span> </li>
-                </ul>
+            <h2> Lucro Obtido </h2>
+                    <p>Preço de venda: R$<span>${v1.toFixed(2)} | Custo: R$<span>${v2.toFixed(2)}</span> </span> </p>
+                    <p>Resultado financeiro: R$<span>${(v1 - v2).toFixed(2)}</span> </p>
+                
         `
     };
 
