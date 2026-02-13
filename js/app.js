@@ -33,7 +33,7 @@ function calcularTotal() {
                 <ul>
                     <li>Valor do produto: R$<span>${v1}</span> </li>
                     <li>Quantidade de produtos: <span>${v2}</span></li>
-                    <li>O valor total da compra será de R$<span>${v1 * v2}</span> </li>
+                    <li>O valor total da compra será de R$<span>${v1 * v2.toFixed(2)}</span> </li>
                 </ul>
         `
     };
@@ -62,7 +62,7 @@ function desconto() {
                 <ul>
                     <li>Valor do produto: R$<span>${v1}</span> </li>
                     <li>Percentual do desconto: <span>${v2}</span></li>
-                    <li>O valor total de desconto será de R$<span>${v1-(v1 * v2)/100}</span> </li>
+                    <li>O valor total de desconto será de R$<span>${v1-(v1 * v2)/100 .toFixed(2)}</span> </li>
                 </ul>
         `
     };
@@ -91,7 +91,7 @@ function juros() {
                 <ul>
                     <li>Valor do produto: R$<span>${v1}</span> </li>
                     <li>Percentual de acréscimo: <span>${v2}</span></li>
-                    <li>O valor total de acréscimo será de R$<span>${v1+(v1 * v2)/100}</span> </li>
+                    <li>O valor total de acréscimo será de R$<span>${v1+(v1 * v2)/100 .toFixed(2)}</span> </li>
                 </ul>
         `
     };
@@ -118,9 +118,9 @@ function comissao() {
         resultado.innerHTML = `
             <h2> Total da Compra </h2>
                 <ul>
-                    <li>Valor do produto: R$<span>${v1}</span> </li>
-                    <li>Percentual do desconto: <span>${v2}</span></li>
-                    <li>O valor total do desconton será de R$<span>${(v1 * v2)/100}</span> </li>
+                    <li>Valor vendido no dia: R$<span>${v1}</span> </li>
+                    <li>Percentual da comissão: <span>${v2}</span></li>
+                    <li>Total recebido de comissão R$<span>${(v1 * v2)/100 .toFixed(2)}</span> </li>
                 </ul>
         `
     };
@@ -147,9 +147,9 @@ function lucro() {
         resultado.innerHTML = `
             <h2> Total da Compra </h2>
                 <ul>
-                    <li>Valor do produto: R$<span>${v1}</span> </li>
-                    <li>Percentual do desconto: <span>${v2}</span></li>
-                    <li>O valor total do desconton será de R$<span>${v1 - v2}</span> </li>
+                    <li>Valor que foi vendido: R$<span>${v1}</span> </li>
+                    <li>Valor que o vendedor comprou: <span>${v2}</span></li>
+                    <li>O valor total do lucro será de R$<span>${v1 - v2.toFixed(2)}</span> </li>
                 </ul>
         `
     };
