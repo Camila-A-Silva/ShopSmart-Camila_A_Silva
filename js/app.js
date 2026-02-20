@@ -171,7 +171,7 @@ function lucro() {
         // Exibe o resultado final
         resultado.innerHTML = `
             <h2> Lucro Obtido </h2>
-                    <p>Preço de venda: R$<span>${v1.toFixed(2)} | Custo: R$<span>${v2.toFixed(2)}</span></p>
+                    <p>Preço de venda: R$<span>${v1.toFixed(2)}</span> | Custo: R$<span>${v2.toFixed(2)}</span></p>
                     <p>Resultado financeiro: R$<span>${(v1 - v2).toFixed(2)}</span> </p>
                 
         `
