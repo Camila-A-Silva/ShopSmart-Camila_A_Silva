@@ -64,6 +64,7 @@ body{
 }
 
 .resultado{
+    display: none;
     flex-direction: column;
     background-color:gainsboro;
     width: 60vh;
