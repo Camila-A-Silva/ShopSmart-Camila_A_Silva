@@ -23,7 +23,7 @@ function calcularTotal() {
 
         // Exibe o resultado final
         resultado.innerHTML = `
-            <h2> Erro de validação </h2><br>
+            <h2> Erro de validação </h2>
                     <p>Por favor, informe valores numéricos válidos nos dois campos.</p>
         `
 
@@ -35,12 +35,9 @@ function calcularTotal() {
         // Exibe o resultado final
         resultado.innerHTML = `
             <h2> Total da Compra </h2>
-            <br>
             <p>Valor do produto: R$<span>${v1.toFixed(2)}</span> </p>
-            <br>
             <p>Quantidade de produtos: <span>${v2}</span></p>
-            <br>
-            <p>O valor total da compra será de R$<span>${(v1 * v2).toFixed(2)}</span> </p>
+            <p>Valor total da compra: R$<span>${(v1 * v2).toFixed(2)}</span> </p>
                 
         `
     };
@@ -61,7 +58,7 @@ function desconto() {
 
         // Exibe o resultado final
         resultado.innerHTML = `
-            <h2> Erro de validação </h2><br>
+            <h2> Erro de validação </h2>
                     <p>Por favor, informe valores numéricos válidos nos dois campos.</p>
         `
 
@@ -72,8 +69,8 @@ function desconto() {
 
         // Exibe o resultado final
         resultado.innerHTML = `
-            <h2> Desconto Aplicado </h2></br>
-                    <p>Foi aplicado um desconto <span>${v2}</span>% sobre um valor de R$<span>${v1.toFixed(2)}</span></p></br>
+            <h2> Desconto Aplicado </h2>
+                    <p>Foi aplicado um desconto <span>${v2}</span>% sobre um valor de R$<span>${v1.toFixed(2)}</span></p>
                     <p>Valor final com desconto: R$<span>${(v1-(v1 * v2)/100).toFixed(2)}</span> </p>
               
         `
@@ -95,7 +92,7 @@ function juros() {
 
        // Exibe o resultado final
        resultado.innerHTML = `
-           <h2> Erro de validação </h2><br>
+           <h2> Erro de validação </h2>
                    <p>Por favor, informe valores numéricos válidos nos dois campos.</p>
        `
     } else {
@@ -105,9 +102,9 @@ function juros() {
 
         // Exibe o resultado final
         resultado.innerHTML = `
-            <h2> Juros Aplicado </h2></br>
-                    <>Foi aplicado um acrécimo de <span>${v2}</span>% sobre o valor de R$<span>${v1.toFixed(2)}</span> </p></br>
-                    <>Valor final com juros R$<span>${(v1+(v1 * v2)/100).toFixed(2)}</span> </p>
+            <h2> Juros Aplicado </h2>
+                    <p>Foi aplicado um acrécimo de <span>${v2}</span>% sobre o valor de R$<span>${v1.toFixed(2)}</span> </p>
+                    <p>Valor final com juros R$<span>${(v1+(v1 * v2)/100).toFixed(2)}</span> </p>
                
         `
     };
@@ -128,7 +125,7 @@ function comissao() {
 
         // Exibe o resultado final
         resultado.innerHTML = `
-            <h2> Erro de validação </h2><br>
+            <h2> Erro de validação </h2>
                     <p>Por favor, informe valores numéricos válidos nos dois campos.</p>
         `
 
@@ -139,9 +136,9 @@ function comissao() {
 
         // Exibe o resultado final
         resultado.innerHTML = `
-            <h2> Comissão Calculada </h2></br>
-                    <p>Comissão de <span>${v2}</span>% sobre uma venda de R$<span>${v1.toFixed(2)}</span></li></br>
-                    <p>Valor da comissão: R$<span>${((v1 * v2)/100).toFixed(2)}</span> </li>
+            <h2> Comissão Calculada </h2>
+                    <p>Comissão de <span>${v2}</span>% sobre uma venda de R$<span>${v1.toFixed(2)}</span></p>
+                    <p>Valor da comissão: R$<span>${((v1 * v2)/100).toFixed(2)}</span> </p>
                 
         `
     };
@@ -162,7 +159,7 @@ function lucro() {
 
         // Exibe o resultado final
         resultado.innerHTML = `
-            <h2> Erro de validação </h2><br>
+            <h2> Erro de validação </h2>
                     <p>Por favor, informe valores numéricos válidos nos dois campos.</p>
         `
 
@@ -174,7 +171,7 @@ function lucro() {
         // Exibe o resultado final
         resultado.innerHTML = `
             <h2> Lucro Obtido </h2>
-                    <p>Preço de venda: R$<span>${v1.toFixed(2)} | Custo: R$<span>${v2.toFixed(2)}</span> </span> </p>
+                    <p>Preço de venda: R$<span>${v1.toFixed(2)} | Custo: R$<span>${v2.toFixed(2)}</span></p>
                     <p>Resultado financeiro: R$<span>${(v1 - v2).toFixed(2)}</span> </p>
                 
         `
