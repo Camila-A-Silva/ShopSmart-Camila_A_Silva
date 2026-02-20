@@ -9,6 +9,7 @@ const input02 = document.getElementById('valor02');
 const resultado = document.getElementById('resultado');
 
 
+
 function calcularTotal() {
 
     // Converte os valores digitados para número
@@ -35,9 +36,8 @@ function calcularTotal() {
         // Exibe o resultado final
         resultado.innerHTML = `
             <h2> Total da Compra </h2>
-            <p>Valor do produto: R$<span>${v1.toFixed(2)}</span> </p>
-            <p>Quantidade de produtos: <span>${v2}</span></p>
-            <p>Valor total da compra: R$<span>${(v1 * v2).toFixed(2)}</span> </p>
+            <p>Você está adquirindo <span>${v2}</span> unidades com valor unitário de R$ <span>${v1.toFixed(2)}</span> </p>
+            <h3>Valor total da compra: R$ <span>${(v1 * v2).toFixed(2)}</span> </h3>
                 
         `
     };
@@ -70,8 +70,8 @@ function desconto() {
         // Exibe o resultado final
         resultado.innerHTML = `
             <h2> Desconto Aplicado </h2>
-                    <p>Foi aplicado um desconto <span>${v2}</span>% sobre um valor de R$<span>${v1.toFixed(2)}</span></p>
-                    <p>Valor final com desconto: R$<span>${(v1-(v1 * v2)/100).toFixed(2)}</span> </p>
+                    <p>Foi aplicado um desconto <span>${v2}</span>% sobre um valor de R$ <span>${v1.toFixed(2)}</span></p>
+                    <h3>Valor final com desconto: R$ <span>${(v1-(v1 * v2)/100).toFixed(2)}</span> </h3>
               
         `
     };
@@ -103,8 +103,8 @@ function juros() {
         // Exibe o resultado final
         resultado.innerHTML = `
             <h2> Acréscimo Aplicado </h2>
-                    <p>Foi aplicado um acréscimo de <span>${v2}</span>% sobre o valor de R$<span>${v1.toFixed(2)}</span> </p>
-                    <p>Valor final com juros R$<span>${(v1+(v1 * v2)/100).toFixed(2)}</span> </p>
+                    <p>Foi aplicado um acréscimo de <span>${v2}</span>% sobre o valor de R$ <span>${v1.toFixed(2)}</span> </p>
+                    <h3>Valor final com juros R$ <span>${(v1+(v1 * v2)/100).toFixed(2)}</span> </h3>
                
         `
     };
@@ -137,8 +137,8 @@ function comissao() {
         // Exibe o resultado final
         resultado.innerHTML = `
             <h2> Comissão Calculada </h2>
-                    <p>Comissão de <span>${v2}</span>% sobre uma venda de R$<span>${v1.toFixed(2)}</span></p>
-                    <p>Valor da comissão: R$<span>${((v1 * v2)/100).toFixed(2)}</span> </p>
+                    <p>Comissão de <span>${v2}</span>% sobre uma venda de R$ <span>${v1.toFixed(2)}</span></p>
+                    <h3>Valor da comissão: R$ <span>${((v1 * v2)/100).toFixed(2)}</span> </h3>
                 
         `
     };
@@ -171,8 +171,8 @@ function lucro() {
         // Exibe o resultado final
         resultado.innerHTML = `
             <h2> Lucro Obtido </h2>
-                    <p>Preço de venda: R$<span>${v1.toFixed(2)}</span> | Custo: R$<span>${v2.toFixed(2)}</span></p>
-                    <p>Resultado financeiro: R$<span>${(v1 - v2).toFixed(2)}</span> </p>
+                    <p>Preço de venda: R$ <span>${v1.toFixed(2)}</span> | Custo: R$ <span>${v2.toFixed(2)}</span></p>
+                    <h3>Resultado financeiro: R$ <span>${(v1 - v2).toFixed(2)}</span> </h3>
                 
         `
     };
